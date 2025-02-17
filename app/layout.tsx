@@ -8,8 +8,8 @@ import type React from "react" // Added import for React
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "GT Movies AI",
-  description: "GT Movies AI - Your AI-powered movie companion",
+  title: "Trinity Team 3",
+  description: "Trinity Team 3",
 }
 
 export default function RootLayout({

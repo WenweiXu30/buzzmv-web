@@ -1,5 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Team | Trinity Team 3",
+	description: "Trinity Team 3",
+  }
 
 const teamMembers = [
 	{

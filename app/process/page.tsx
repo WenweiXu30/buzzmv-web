@@ -2,6 +2,12 @@ import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Process | Trinity Team 3",
+	description: "Trinity Team 3",
+  }
 
 const processSteps = [
 	{
@@ -73,9 +79,9 @@ export default function ProcessPage() {
 	return (
 		<main className="container mx-auto px-4 py-8">
 			<div className="space-y-12">
-				<h1 className="text-4xl font-extrabold text-center gt-text-gradient">Movie Store: Our Process</h1>
+				<h1 className="text-4xl font-extrabold text-center gt-text-gradient">Buzz Movies Store: Our Process</h1>
 				<p className="text-center max-w-2xl mx-auto text-lg dark-mode-text">
-					We followed the Scrum methodology to develop the GT Movie Store, ensuring an agile and efficient development process.
+					We followed the Scrum methodology to develop the Buzz Movies Store, ensuring an agile and efficient development process.
 				</p>
 				<div className="space-y-8">
 					{processSteps.map((step, index) => (
