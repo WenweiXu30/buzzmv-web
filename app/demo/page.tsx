@@ -31,7 +31,7 @@ export default function DemoPage() {
 				</div>
 				<div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
 					<iframe
-						src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with your actual demo video URL
+						src="https://www.youtube.com/embed/f1kmIgfipvY?si=rarH77EPD1pWeECz" // Replace with your actual demo video URL
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 						allowFullScreen
 						className="absolute top-0 left-0 w-full h-full"
