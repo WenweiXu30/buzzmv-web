@@ -1,115 +1,141 @@
 import Image from "next/image";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Process | Trinity Team 3",
-	description: "Trinity Team 3",
-  }
+  title: "Process | Trinity Team 3",
+  description: "Trinity Team 3",
+  icons: {
+    icon: "/pokefav.ico",
+  },
+};
 
 const processSteps = [
-	{
-		title: "Team Structure",
-		description: `
-We built a well-rounded team with clear roles:
-- A Scrum Master to keep us organized and on track.
-- A Product Owner to guide our vision.
-- Development team members focused on building features.
-- Documentation specialists to keep everything clear and organized.
+  {
+    title: "Team Structure",
+    description: `
+	We organized our team for effective collaboration:
+	- All members primarily communicated via Discord
+	- Each member contributed to development, 
+	  design, and project planning
+	- Strong emphasis on shared responsibilities and 
+	  active participation
 		`,
-		image: "/bo.png",
-	},
-	{
-		title: "How We Worked Together",
-		description: `
-We followed a Scrum approach that worked well for us:
-- Regular planning sessions to map out our next steps
-- Quick daily check-ins to share progress and help each other
-- End-of-sprint demos to show what we built
-- Team discussions about what worked and what we could do better
+    image: "/ash.png",
+  },
+  {
+    title: "How We Worked Together",
+    description: `
+	We applied agile principles customized for our team:
+	- Frequent check-ins through Discord to share updates
+	- Individual ownership of features to promote accountability
+	- Regular communication with our mentor TA for guidance and feedback
 		`,
-		image: "/so.png",
-	},
-	{
-		title: "Building the Features",
-		description: `
-We broke down our Movie app into manageable pieces:
-- Started with the core features like User login
-- Added user reviews
-- Built sharing capabilities
-- Prioritized features based on what would bring the most value to users
+    image: "/pikachu.png",
+  },
+  {
+    title: "Building the Features",
+    description: `
+	Our development focused on key features:
+	- User registration, login, and password reset
+	- Daily Pokemon pack openings to engage users
+	- Marketplace features: buy, sell, and trade Pokemon cards
+	- Profile customization and AI battle simulation
 		`,
-		image: "/1c.png",
-	},
-	{
-		title: "Keeping Quality High",
-		description: `
-Made sure everything worked smoothly through:
-- Regular testing at different levels
-- User feedback sessions
-- Fine-tuning based on what we learned
+    image: "/hoopa.png",
+  },
+  {
+    title: "Architecture and Design Patterns",
+    description: `
+	We carefully chose our technical foundation:
+	- MVC Architecture for clear separation of concerns
+	- Factory Method Pattern for creating model instances
+	- Singleton Pattern to ensure a single database connection
 		`,
-		image: "/2c.png",
-	},
-	{
-		title: "Staying Connected",
-		description: `
-Kept everyone in the loop using:
-- Discord for quick team chats
-- GitHub for sharing code
-- Regular updates to show our progress
+    image: "/victini.png",
+  },
+  {
+    title: "Keeping Quality High",
+    description: `
+	We focused on maintaining high quality through:
+	- Consistent testing of new features
+	- Immediate bug fixes based on user feedback
+	- Version control with GitHub for collaborative coding
 		`,
-		image: "/r.png",
-	},
-	{
-		title: "Tackling Challenges",
-		description: `
-Faced and solved several hurdles:
-- User Reviews
-- Correct Sizing of Website for Different Devices
-- Email Password Reset
+    image: "/blissey.png",
+  },
+  {
+    title: "Staying Connected",
+    description: `
+	Kept everyone in the loop using:
+	- Discord for quick team chats
+	- GitHub for sharing code
+	- Regular updates to show our progress
 		`,
-		image: "/fm.png",
-	},
+    image: "/squirtle.png",
+  },
+  {
+    title: "Tackling Challenges",
+    description: `
+	Throughout the project, we tackled key challenges:
+	- Handling user authentication and password reset securely
+	- Designing a responsive UI for smooth experience
+	- Implementing trading and marketplace interactions
+		`,
+    image: "/charizard.png",
+  },
 ];
 
 export default function ProcessPage() {
-	return (
-		<main className="container mx-auto px-4 py-8">
-			<div className="space-y-12">
-				<h1 className="text-4xl font-extrabold text-center gt-text-gradient">Buzz Movies Store: Our Process</h1>
-				<p className="text-center max-w-2xl mx-auto text-lg dark-mode-text">
-					We followed the Scrum methodology to develop the Buzz Movies Store, ensuring an agile and efficient development process.
-				</p>
-				<div className="space-y-8">
-					{processSteps.map((step, index) => (
-						<Card key={index} className="overflow-hidden border-[#B3A369]">
-							<div className="md:flex">
-								<div className="md:w-1/2 p-6">
-									<CardHeader>
-										<CardTitle className="text-xl dark-mode-text">{step.title}</CardTitle>
-									</CardHeader>
-									<CardContent>
-										<CardDescription className="text-lg dark-mode-text">
-											<ReactMarkdown remarkPlugins={[remarkGfm]}>{step.description}</ReactMarkdown>
-										</CardDescription>
-									</CardContent>
-								</div>
-								<div className="md:w-1/2 relative h-64 md:h-auto">
-									<Image
-										src={step.image || "/process-step-placeholder.svg"}
-										alt={step.title}
-										layout="fill"
-										objectFit="cover"
-									/>
-								</div>
-							</div>
-						</Card>
-					))}
-				</div>
-			</div>
-		</main>
-	);
+  return (
+    <main className="container mx-auto px-4 py-8">
+      <div className="space-y-12">
+        <h1 className="text-4xl font-extrabold text-center gt-text-gradient">
+          PokeTrade: Our Process
+        </h1>
+        <p className="text-center max-w-2xl mx-auto text-lg dark-mode-text">
+          We followed the Scrum methodology to develop PokeTrade, ensuring an
+          agile and efficient development process.
+        </p>
+        <div className="space-y-8">
+          {processSteps.map((step, index) => (
+            <Card key={index} className="overflow-hidden border-[#B3A369]">
+              <div className="md:flex">
+                <div className="md:w-1/2 p-6 flex flex-col justify-center">
+                  <CardHeader>
+                    <CardTitle className="text-xl dark-mode-text">
+                      {step.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-lg dark-mode-text">
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {step.description}
+                      </ReactMarkdown>
+                    </CardDescription>
+                  </CardContent>
+                </div>
+                <div className="md:w-1/2 relative h-64 md:h-96">
+                  <Image
+                    src={step.image || "/process-step-placeholder.svg"}
+                    alt={step.title}
+                    fill
+                    className="object-contain p-6"
+                  />
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </main>
+  );
 }
